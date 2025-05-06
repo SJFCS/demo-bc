@@ -1,0 +1,84 @@
+2019-01-01 open Expenses:Clothing
+2019-01-01 open Expenses:Food:Dinner
+2019-01-01 open Expenses:Transport:Airline
+2019-01-01 open Expenses:Transport:Railway
+
+
+
+
+2019-01-01 open Expenses:Food
+2019-01-01 open Expenses:Drink
+2019-01-01 open Expenses:Drink:Coffee
+2019-01-01 open Expenses:Fruit
+2019-01-01 open Expenses:Transport
+2019-01-01 open Expenses:Shopping
+2019-01-01 open Expenses:Books
+2019-01-01 open Expenses:Study
+
+2019-01-01 open Expenses:Tech
+2019-01-01 open Expenses:Tech:Cloud
+2019-01-01 open Expenses:Tech:Domain
+2019-01-01 open Expenses:Tech:Security
+
+2019-01-01 open Expenses:Apps
+2019-01-01 open Expenses:Games
+2019-01-01 open Expenses:Others
+
+2019-01-01 open Expenses:Social
+2019-01-01 open Expenses:Social:Food
+2019-01-01 open Expenses:Social:Drink
+2019-01-01 open Expenses:Social:Movie
+
+2019-01-01 open Expenses:Entertainment:Movie
+2019-01-01 open Expenses:Entertainment:Spotify
+2019-01-01 open Expenses:Entertainment:Netflix
+2019-01-01 open Expenses:Entertainment:Apps
+2019-01-01 open Expenses:Entertainment:Exhibition
+2019-01-01 open Expenses:Entertainment:Concert
+
+2019-01-01 open Expenses:Health
+2019-01-01 open Expenses:Health:Medicine
+2019-01-01 open Expenses:Insurance
+2019-01-01 open Expenses:Haircut
+2019-01-01 open Expenses:Gift
+2019-01-01 open Expenses:Phone
+
+2019-01-01 open Expenses:Fees:CreditCard
+2019-01-01 open Expenses:Fees:Transfer
+2019-01-01 open Expenses:Fees:Management
+2019-01-01 open Expenses:Fees:Ticket
+2019-01-01 open Expenses:Activities
+2019-01-01 open Expenses:Package-Delivery
+
+2019-01-01 open Expenses:Shopping:Clothes
+2019-01-01 open Expenses:Shopping:Tshirt
+2019-01-01 open Expenses:Shopping:Pants
+2019-01-01 open Expenses:Shopping:Shoes
+2019-01-01 open Expenses:Shopping:Socks
+2019-01-01 open Expenses:Shopping:Gadgets
+
+2019-01-01 open Expenses:Rent
+2019-01-01 open Expenses:Home:Daily
+2019-01-01 open Expenses:Home:Electricity
+
+2019-01-01 open Expenses:Travel:Transport
+2019-01-01 open Expenses:Travel:Food
+2019-01-01 open Expenses:Travel:Drink
+2019-01-01 open Expenses:Travel:Hotel
+2019-01-01 open Expenses:Travel:Tickets
+2019-01-01 open Expenses:Travel:Movie
+2019-01-01 open Expenses:Travel:Health
+2019-01-01 open Expenses:Travel:Shopping
+2019-01-01 open Expenses:Travel:Gift
+
+2019-01-01 open Expenses:Parents:Gift
+2019-01-01 open Expenses:Parents:Health
+2019-01-01 open Expenses:Parents:Insurance
+
+2019-01-01 open Expenses:Government:Pension ; 养老保险
+2019-01-01 open Expenses:Government:Unemployment ; 失业保险
+2019-01-01 open Expenses:Government:MedicalCare ; 医疗保险
+2019-01-01 open Expenses:Government:HousingFund ; 住房公积金
+2019-01-01 open Expenses:Government:IncomeTax ; 个人所得税
+
+2019-01-01 open Expenses:SideProject

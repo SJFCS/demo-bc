@@ -1,0 +1,4 @@
+2019-01-01 open Equity:Opening-Balances
+2019-01-01 open Liabilities:CreditCard:US:Discover USD
+2019-01-01 open Liabilities:CreditCard:JP:Rakuten JPY
+; 接下来是负债类别的账户，最常见的就是信用卡，组织方式和使用方法和资产账户没有什么区别，譬如：

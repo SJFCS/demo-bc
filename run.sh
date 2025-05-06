@@ -1,0 +1,1 @@
+fava ./2025/leplay.bean

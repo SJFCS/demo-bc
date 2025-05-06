@@ -1,0 +1,37 @@
+2019-01-01 open Assets:CN:Cash
+2019-01-01 open Assets:CN:Alipay        ; 支付宝余额
+2019-01-01 open Assets:CN:Wechat        ; 微信零钱
+2019-01-01 open Assets:CN:DebitCard:CMB ; 招商银行储蓄卡
+2019-01-01 open Assets:CN:DebitCard:BOC ; 中国银行储蓄卡
+
+2019-01-01 open Assets:CN:FinTech:LCT   ; 微信理财通
+2019-01-01 open Assets:CN:FinTech:ZZY   ; 招行朝朝盈
+2019-01-01 open Assets:CN:FinTech:YEB   ; 支付宝余额宝
+
+2019-01-01 open Assets:HK:DebitCard HKD ; 香港储蓄卡
+
+2019-01-01 open Assets:US:Paypal USD    ; Paypal 美元
+
+2019-01-01 open Assets:Investment:Gold GOLD ; 黄金
+
+2019-01-01 open Assets:Receivables:A    ; 朋友 A，用于帮其代付时记账
+2019-01-01 open Assets:Receivables:B    ; 朋友 B
+
+
+
+
+
+
+2019-01-01 open Assets:Cash:JPY JPY
+2019-01-01 open Assets:Cash:USD USD
+2019-01-01 open Assets:Bank:CH:UBS CHF
+2019-01-01 open Assets:Bank:CN:BoC CNY
+2019-01-01 open Assets:Bank:US:Chase:Checking USD
+2019-01-01 open Assets:Bank:US:Chase:Saving USD
+2019-01-01 open Assets:Bank:JP:SMBC:JPY JPY
+2019-01-01 open Assets:Bank:JP:SMBC:USD USD
+2019-01-01 open Assets:Broker:US:IB USD, JPY, CHF
+2019-01-01 open Assets:Points:Airline:JAL P_JAL
+2019-01-01 open Assets:Points:Airline:United P_UA
+
+; 先分账户类型，再分国家，然后是金融机构名，最后是具体账户

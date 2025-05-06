@@ -1,0 +1,29 @@
+2019-01-01 open Income:Company:Salary
+
+2019-01-01 open Income:SideProject
+2019-01-01 open Income:Gift
+
+2019-01-01 open Income:Activities
+
+2019-01-01 open Income:Insurance
+2019-01-01 open Income:Interest:YEB
+2019-01-01 open Income:Interest:LCT
+2019-01-01 open Income:Interest:ZZY
+
+2019-01-01 open Income:Government:MedicalCare
+
+2019-01-01 open Income:Exchange
+
+2019-01-01 open Income:Investment:Gold
+
+2019-01-01 open Income:Friends:A ; 有时帮朋友代付，朋友还款金额大于实际金额时，可以记到这里
+
+
+
+
+
+
+
+
+2019-01-01 open Income:Salary
+2019-01-01 open Income:Rebate

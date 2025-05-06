@@ -1,0 +1,14 @@
+2019-01-01 open Liabilities:CreditCard:UnionPay:CMB
+2019-01-01 open Liabilities:CreditCard:UnionPay:BOC
+
+2019-01-01 open Liabilities:CreditCard:MASTER:BOC
+
+2019-01-01 open Liabilities:CreditCard:VISA:BOC
+
+2019-01-01 open Liabilities:CreditCard:AMEX:BOC
+
+2019-01-01 open Liabilities:JD:BT      ; 京东白条
+2019-01-01 open Liabilities:Alipay:HB  ; 支付宝花呗
+
+2019-01-01 open Liabilities:Payable:A
+2019-01-01 open Liabilities:Payable:B

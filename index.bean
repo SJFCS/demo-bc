@@ -1,0 +1,81 @@
+* 账本信息
+option "title" "我的账本" ;账本名称
+option "operating_currency" "CNY" ;账本主货币
+
+; ; 币种设置
+2019-07-01 commodity CNY
+2019-07-01 commodity USD
+
+; ; Fava
+; 2019-01-01 custom "fava-option" "default-file"
+; 2019-01-01 custom "fava-option" "interval" "month"
+2019-01-01 custom "fava-option" "auto-reload" "true"
+1990-01-01 custom "fava-option" "language" "zh" 
+
+; ; 基础显示设置
+; 2019-01-01 custom "fava-option" "currency-column" "77" ; 金额列的位置（字符数）
+; 2019-01-01 custom "fava-option" "show-accounts-with-zero" "true" ; 显示余额为零的账户
+; 2019-01-01 custom "fava-option" "show-closed-accounts" "false" ; 是否显示已关闭账户
+; 2019-01-01 custom "fava-option" "use-cost" "true" ; 使用成本而不是市值显示
+
+; ; 图表和报表设置
+; 2019-01-01 custom "fava-option" "charts" "balance" ; 启用的图表类型(balance/income/expenses)
+; 2019-01-01 custom "fava-option" "fiscal-year-end" "12-31" ; 财年结束日期
+; 2019-01-01 custom "fava-option" "collapse-pattern" "" ; 自动折叠的账户模式
+
+; ; 界面设置
+; 2019-01-01 custom "fava-option" "theme" "auto" ; 主题(auto/light/dark)
+; 2019-01-01 custom "fava-option" "sidebar-show-queries" "true" ; 侧边栏显示查询
+; 2019-01-01 custom "fava-option" "editor-print-margin-column" "60" ; 编辑器打印边距
+
+; ; 高级功能
+; 2019-01-01 custom "fava-option" "import-config" "path/to/import.yml" ; 导入配置文件路径
+; 2019-01-01 custom "fava-option" "import-dirs" ["path/to/import"] ; 导入目录
+; 2019-01-01 custom "fava-option" "documents" "path/to/documents" ; 单据存放目录
+
+; ; Accounts
+;【二、账户设置】
+;1、开设账户
+; 开启日期 open 账户名 货币类型
+
+1990-01-01 open Assets:Card:1234 CNY, USD ;尾号1234的银行卡，支持CNY和USD
+1990-01-01 open Liabilities:CreditCard:5678 CNY, USD ;双币信用卡
+1990-01-01 open Income:Salary CNY ;工资收入
+1990-01-01 open Expenses:Tax CNY ;交税
+1990-01-01 open Expenses:Traffic:Taxi CNY ;打车消费，只支持CNY
+1990-01-01 open Equity:OpenBalance ;用于账户初始化，支持任意货币
+
+;【二、账户设置】
+; include "accounts/assets.bean"  ;资产账户设置及初始化
+; include "accounts/expenses.bean"  ;支出账户设置
+; include "accounts/liabilities.bean"  ;负债账户设置及初始化
+; include "accounts/income.bean"  ;收入账户设置
+; include "accounts/equity.bean"  ;权益账户设置
+
+; ; Initialize
+; include "2025/init.bean"
+;2、账户初始化
+2019-08-27 * "" "银行卡，初始余额10000元"
+    Assets:Card:1234           10000.00 CNY
+    Equity:OpenBalance        -10000.00 CNY
+
+
+; ; Transactions
+; include "2025/04.bean"
+
+;【三、交易记录】
+2019-08-28 * "杭州出租车公司" "打车到公司，银行卡支付"
+    Expenses:Traffic:Taxi        200.00 CNY
+    Assets:Card:1234            -200.00 CNY
+
+2019-08-29 * "" "餐饮"
+    Assets:Card:1234           -1100.00 CNY
+    Liabilities:CreditCard:5678 1100.00 CNY
+2019-08-31 * "XX公司" "工资收入"
+    Assets:Card:1234           12000.00 CNY
+    Expenses:Tax                1000.00 CNY
+    Income:Salary
+2019-09-01 * "XX公司" "工资收入"
+    Assets:Card:1234           11000.00 CNY
+    Expenses:Tax                1000.00 CNY
+    Income:Salary
