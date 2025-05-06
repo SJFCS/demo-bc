@@ -1,0 +1,79 @@
+
+
+
+收入 → 资产：小明是个无业游民，有天他在路上捡到 100 元，没有交给警察叔叔——收入桶倒出 100 元，资产桶增加 100 元；
+负债 → 资产：小明看中一件新衣服，但是买不起，于是问大明借了 200 元——负债桶倒出 200 元，资产桶增加 200 元；
+资产 → 费用：小明用 300 元买了一件衣服——资产桶倒出 300 元，费用桶增加 300 元；
+费用 → 资产：小明发现衣服不合适，要退货，老板说你穿了好几天了，只能退你 250 元——费用桶倒出 250 元，资产桶增加 250 元；
+小明完成了这四笔交易之后，四个桶的状态：
+
+收入：-100 元
+负债：-200 元
+资产：250 元
+费用：50 元
+
+1970-01-01 open Income:Windfall
+1970-01-01 open Assets:Cash
+1970-01-01 open Liabilities:Da-Ming
+1970-01-01 open Expenses:Clothing
+
+2016-01-01 * "捡到钱了"
+  Income:Windfall                            -100.00 CNY
+  Assets:Cash                                +100.00 CNY
+
+2016-01-01 * "向大明借钱"
+  Liabilities:Da-Ming                        -200.00 CNY
+  Assets:Cash                                +200.00 CNY
+
+2016-01-01 * "XX 百货商店" "买衣服"
+  Assets:Cash                                -300.00 CNY
+  Expenses:Clothing                          +300.00 CNY
+
+2016-01-02 * "XX 百货商店" "退衣服"
+  Expenses:Clothing                          -250.00 CNY
+  Assets:Cash                                +250.00 CNY
+; 账户只能是英文+数字和简单符合
+; 其中日期后面的星号（*）代表这是一笔已确认的交易，如果换成感叹号（!）的话，则代表这笔交易有疑惑，后期对账时应注意。
+; 对账标志后面则是跟着收款人（Payee）和备注（Narration），需要用引号包起来。Payee 是可选的，只有一个字符串的话，这串字符就是 Narration 了。
+
+
+
+
+
+
+
+
+
+(BEANCOUNT) bean-report 1.bean balances
+Assets:Cash 250.00 CNY
+Equity
+Expenses:Clothing 50.00 CNY
+Income:Windfall -100.00 CNY
+Liabilities:Da-Ming -200.00 CNY
+
+执行 bean-web 1.bean 命令，然后在浏览器中打开 http://localhost:8080/
+执行 fava xiaoming.bean 命令，然后在浏览器中打开 http://localhost:8080/
+
+
+
+
+
+;小明的例子都是两个账户间「一对一」交易，如一个 Income 账户一个 Assets 账户，或一个 Assets 账户一个 Expenses 账户等。
+;但实际上，生活中会遇到各种「一对多」或「多对一」或「多对多」的交易：
+;购买大件物品时因银行支付限额而使用多张银行卡合并付款；
+;朋友出去唱歌、聚餐每人付的钱不同，事后 AA 平摊等。
+;以下几个例子是有意构造的涉及到两个以上账户的交易，让我们一起来看看小红的账本。
+
+2016-01-31 * "工资 2016-01"
+  Income:SomeCompany:Salary                -20000.00 CNY ; 应发工资
+  Income:SomeCompany:Reimbursement          -1000.00 CNY ; 餐补
+  Income:SomeCompany:Reimbursement           +100.00 CNY ; 餐补扣除
+  Expenses:Government:Pension               +1500.00 CNY ; 养老保险
+  Expenses:Government:Unemployment           +100.00 CNY ; 失业保险
+  Expenses:Government:MedicalCare            +500.00 CNY ; 医疗保险
+  Expenses:Government:HousingFund           +3000.00 CNY ; 住房公积金
+  Expenses:Government:IncomeTax             +3000.00 CNY ; 个人所得税
+  Assets:CMB:C1234                         +12800.00 CNY ; 实发工资
+
+;这个例子展现了如何在 Beancount 里体现工资条上的内容。每个月的工资条上总会有各种各样的名目。小红在使用了 Beancount 之后，可以方便地把工资、餐补、三险一金、个税等信息都记录进去，以后能很方便地统计每个月有多少工资是喂狗的。
+
